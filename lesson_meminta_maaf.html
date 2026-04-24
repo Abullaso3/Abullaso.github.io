@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="ms" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rancangan Pengajaran Harian — Meminta Maaf dengan Ikhlas</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        heading: ['Quicksand', 'sans-serif'],
+        body: ['Nunito', 'sans-serif']
+      },
+      colors: {
+        peach: { 50: '#FFF5F0', 100: '#FFE8DB', 200: '#FFD4BC', 400: '#FFa67A', 500: '#FF8C5A' },
+        sky: { 50: '#F0F7FF', 100: '#DDEEFF', 200: '#BAD9FF', 400: '#6BB3FF' },
+        mint: { 50: '#F0FFF7', 100: '#D4F5E4', 200: '#A8EBCA', 400: '#4DD99A', 500: '#2ECC80' }
+      }
+    }
+  }
+}
+</script>
+  <style>
+html, body { height: 100%; margin: 0; }
+@keyframes floatIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse-soft { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+.anim-in { animation: floatIn 0.6s ease-out both; }
+.anim-d1 { animation-delay: 0.1s; }
+.anim-d2 { animation-delay: 0.2s; }
+.anim-d3 { animation-delay: 0.3s; }
+.anim-d4 { animation-delay: 0.4s; }
+.anim-d5 { animation-delay: 0.5s; }
+.anim-d6 { animation-delay: 0.6s; }
+.anim-d7 { animation-delay: 0.7s; }
+.pulse-icon { animation: pulse-soft 3s ease-in-out infinite; }
+.value-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+.value-card { transition: all 0.3s ease; }
+.section-block { border-radius: 20px; }
+.pill { border-radius: 999px; display: inline-flex; align-items: center; gap: 6px; padding: 6px 16px; font-size: 0.85rem; font-weight: 600; }
+.choice-btn { transition: all 0.2s ease; border: 3px solid transparent; }
+.choice-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+.choice-btn.selected-wrong { border-color: #C0392B; background-color: #FFECEC; }
+.choice-btn.selected-correct { border-color: #1B6B42; background-color: #E8F8EE; }
+</style>
+ </head>
+ <body class="h-full">
+  <div id="app-wrapper" class="w-full h-full overflow-auto" style="background-color: #FFFBF7; font-family: 'Nunito', sans-serif;">
+   <!-- Page Navigation -->
+   <div class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex gap-2 justify-center">
+      <button id="page1-btn" class="px-6 py-2 rounded-full font-heading font-700 text-sm transition-all" style="background-color: #FFD4BC; color: #8B4513;">📋 Rujukan RPH</button>
+      <button id="page2-btn" class="px-6 py-2 rounded-full font-heading font-700 text-sm transition-all" style="background-color: #E8F8EE; color: #1B6B42;">🎓 Aktiviti Pengajaran</button>
+    </div>
+   </div>
+
+   <!-- Page 1: Rujukan RPH -->
+   <div id="page1" class="w-full">
+    <header class="anim-in" style="background: linear-gradient(135deg, #FFE8DB 0%, #DDEEFF 50%, #D4F5E4 100%); padding: 48px 24px 40px; text-align: center;">
+     <div class="max-w-3xl mx-auto">
+      <div class="pulse-icon inline-flex items-center justify-center w-20 h-20 rounded-full mb-5" style="background-color: #FFD4BC;">
+       <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF8C5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>
+      </div>
+      <h1 class="font-heading text-3xl md:text-5xl font-900 mb-3" style="color: #4A3728;">Meminta Maaf dengan Ikhlas</h1>
+      <p class="font-heading text-lg md:text-xl font-600 mb-6" style="color: #7A6355;">Rancangan Pengajaran Harian | Pendidikan Moral | Sekolah Rendah</p>
+      <div class="flex flex-wrap justify-center gap-3">
+       <span class="pill" style="background-color: #FFD4BC; color: #8B4513;">📚 Pendidikan Moral</span>
+       <span class="pill" style="background-color: #BAD9FF; color: #1E5A99;">🎓 Tahun 2 / Tahun 3</span>
+       <span class="pill" style="background-color: #A8EBCA; color: #1B6B42;">⏱️ 3–5 Minit</span>
+      </div>
+     </div>
+    </header>
+    <main class="max-w-4xl mx-auto px-4 md:px-6 py-8 space-y-8">
+     <!-- Nilai Murni -->
+     <section class="anim-in anim-d1 section-block p-6 md:p-8" style="background-color: #FFF5F0;">
+      <h2 class="font-heading text-2xl font-800 mb-6 text-center" style="color: #4A3728;">🌟 Nilai Murni</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+       <div class="value-card rounded-2xl p-5 text-center bg-white shadow-sm"><div class="text-3xl mb-2">🤝</div><p class="font-heading font-700 text-sm" style="color: #4A3728;">Bertolak Ansur</p></div>
+       <div class="value-card rounded-2xl p-5 text-center bg-white shadow-sm"><div class="text-3xl mb-2">💗</div><p class="font-heading font-700 text-sm" style="color: #4A3728;">Belas Kasihan</p></div>
+       <div class="value-card rounded-2xl p-5 text-center bg-white shadow-sm"><div class="text-3xl mb-2">🙏</div><p class="font-heading font-700 text-sm" style="color: #4A3728;">Hormat-Menghormati</p></div>
+       <div class="value-card rounded-2xl p-5 text-center bg-white shadow-sm"><div class="text-3xl mb-2">💎</div><p class="font-heading font-700 text-sm" style="color: #4A3728;">Keikhlasan</p></div>
+      </div>
+     </section>
+     <!-- Objektif -->
+     <section class="anim-in anim-d2 section-block p-6 md:p-8" style="background-color: #F0F7FF;">
+      <h2 class="font-heading text-2xl font-800 mb-5" style="color: #1E5A99;">🎯 Objektif Pembelajaran</h2>
+      <div class="space-y-4">
+       <div class="flex items-start gap-4 bg-white rounded-xl p-4 shadow-sm"><span class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-800 text-sm text-white" style="background-color: #6BB3FF;">1</span><p class="font-body" style="color: #333;">Murid dapat menyatakan kepentingan meminta maaf kepada orang lain.</p></div>
+       <div class="flex items-start gap-4 bg-white rounded-xl p-4 shadow-sm"><span class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-800 text-sm text-white" style="background-color: #6BB3FF;">2</span><p class="font-body" style="color: #333;">Murid dapat menunjukkan cara meminta maaf yang betul melalui lakonan.</p></div>
+       <div class="flex items-start gap-4 bg-white rounded-xl p-4 shadow-sm"><span class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-800 text-sm text-white" style="background-color: #6BB3FF;">3</span><p class="font-body" style="color: #333;">Murid dapat memberikan contoh situasi yang memerlukan seseorang meminta maaf.</p></div>
+      </div>
+     </section>
+     <!-- Set Induksi -->
+     <section class="anim-in anim-d3 section-block p-6 md:p-8" style="background-color: #FFF5F0;">
+      <h2 class="font-heading text-2xl font-800 mb-2" style="color: #C2662D;">✨ Set Induksi — Tarik Perhatian Murid</h2>
+      <span class="pill mb-4" style="background-color: #FFE8DB; color: #8B4513;">⏱️ 1 Minit</span>
+      <div class="bg-white rounded-xl p-5 shadow-sm mt-4" style="border-left: 4px solid #FF8C5A;">
+       <p class="font-body mb-4" style="color: #333;">Guru menunjukkan dua gambar situasi — seorang murid menumpahkan air ke baju rakan, kemudian gambar kedua menunjukkan murid tersebut meminta maaf.</p>
+       <div class="rounded-xl p-4" style="background-color: #FFF5F0;"><p class="font-heading font-700 text-sm mb-1" style="color: #C2662D;">💬 Soalan Guru:</p><p class="font-body italic" style="color: #5A4030;">"Apa yang berlaku di sini? Apa yang patut dia buat?"</p></div>
+      </div>
+      <div class="mt-4"><span class="pill" style="background-color: #A8EBCA; color: #1B6B42;">📎 BBM: 2 keping gambar situasi (A4, laminated)</span></div>
+     </section>
+     <!-- Aktiviti -->
+     <section class="anim-in anim-d4 section-block p-6 md:p-8" style="background-color: #F0FFF7;">
+      <h2 class="font-heading text-2xl font-800 mb-6" style="color: #1B6B42;">🎮 Aktiviti Pengajaran</h2>
+      <div class="grid md:grid-cols-2 gap-5">
+       <div class="bg-white rounded-2xl p-5 shadow-sm" style="border-top: 4px solid #4DD99A;">
+        <h3 class="font-heading text-lg font-800 mb-3" style="color: #1B6B42;">Aktiviti 1</h3>
+        <p class="font-heading font-700 text-sm mb-3" style="color: #2ECC80;">Kad Dialog "A atau B?"</p>
+        <p class="font-body text-sm mb-4" style="color: #333;">Situasi: Amir tertumpahkan makanan ke baju Ali. Murid pilih cara meminta maaf yang betul.</p>
+        <div class="space-y-2 mb-4">
+         <div class="rounded-lg p-3 flex items-center gap-2" style="background-color: #FFECEC;"><span>❌</span><p class="text-sm font-body italic" style="color: #C0392B;">A: "Alah, baju kau je pun!"</p></div>
+         <div class="rounded-lg p-3 flex items-center gap-2" style="background-color: #E8F8EE;"><span>✅</span><p class="text-sm font-body italic" style="color: #1B6B42;">B: "Maaf, Amir tidak sengaja. Biar Amir tolong lap."</p></div>
+        </div>
+        <span class="pill text-xs" style="background-color: #A8EBCA; color: #1B6B42;">📎 Kad Dialog A & B</span>
+       </div>
+       <div class="bg-white rounded-2xl p-5 shadow-sm" style="border-top: 4px solid #6BB3FF;">
+        <h3 class="font-heading text-lg font-800 mb-3" style="color: #1E5A99;">Aktiviti 2</h3>
+        <p class="font-heading font-700 text-sm mb-3" style="color: #6BB3FF;">Lakonan Spontan "Apa yang Kamu Buat?"</p>
+        <p class="font-body text-sm mb-4" style="color: #333;">Guru pilih 2 murid secara rawak dan beri situasi. Murid lakonkan cara meminta maaf.</p>
+        <div class="rounded-lg p-3 mb-4" style="background-color: #F0F7FF;"><p class="font-heading font-700 text-xs mb-1" style="color: #1E5A99;">💡 Tip Guru:</p><p class="text-xs font-body" style="color: #444;">Pandang mata, cakap dengan tulus, jangan gelak.</p></div>
+        <span class="pill text-xs" style="background-color: #A8EBCA; color: #1B6B42;">📎 Kad Situasi + Boneka Tangan</span>
+       </div>
+      </div>
+     </section>
+     <!-- Semakan Kefahaman -->
+     <section class="anim-in anim-d5 section-block p-6 md:p-8" style="background-color: #F0F7FF;">
+      <h2 class="font-heading text-2xl font-800 mb-5" style="color: #1E5A99;">🧠 Semakan Kefahaman</h2>
+      <div class="bg-white rounded-2xl p-6 shadow-sm space-y-4" style="border: 2px dashed #BAD9FF;">
+       <div class="flex items-start gap-3"><span class="flex-shrink-0 text-lg">❓</span><p class="font-body" style="color: #333;">Bila kita patut meminta maaf?</p></div>
+       <div class="flex items-start gap-3"><span class="flex-shrink-0 text-lg">❓</span><p class="font-body" style="color: #333;">Tunjukkan saya cara yang betul untuk meminta maaf kepada rakan kamu.</p></div>
+       <div class="flex items-start gap-3"><span class="flex-shrink-0 text-lg">❓</span><p class="font-body" style="color: #333;">Bagaimana perasaan kamu bila seseorang meminta maaf kepada kamu dengan ikhlas?</p></div>
+      </div>
+     </section>
+     <!-- Penutup -->
+     <section class="anim-in anim-d6 section-block p-6 md:p-8 text-center" style="background: linear-gradient(135deg, #FFE8DB, #D4F5E4);">
+      <h2 class="font-heading text-2xl font-800 mb-4" style="color: #4A3728;">🕊️ Penutup — Ikrar Nilai</h2>
+      <p class="font-body mb-5 max-w-2xl mx-auto" style="color: #555;">Guru mengakhiri pengajaran dengan murid menyebut bersama-sama:</p>
+      <div class="bg-white rounded-2xl p-6 shadow-md max-w-lg mx-auto mb-5" style="border: 3px solid #FFD4BC;"><p class="font-heading text-lg md:text-xl font-800" style="color: #C2662D;">"Saya akan meminta maaf dengan ikhlas jika saya bersalah."</p></div>
+      <p class="font-body text-sm italic" style="color: #7A6355;">Guru menegaskan bahawa meminta maaf adalah tanda <strong>berani</strong>, bukan tanda lemah. 💪</p>
+      <div class="mt-4"><span class="pill" style="background-color: #A8EBCA; color: #1B6B42;">📎 Kad Ikrar Nilai (paparan depan kelas)</span></div>
+
+      <!-- Kesimpulan Rukun Negara -->
+      <div class="mt-8 rounded-2xl p-6 text-left" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%); border: 2px solid #FFD700;">
+        <!-- Header -->
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: #FFD700;">
+            <span style="font-size: 22px;">🌙</span>
+          </div>
+          <div>
+            <p class="font-heading font-800 text-base" style="color: #FFD700; letter-spacing: 0.04em;">RUKUN NEGARA — PRINSIP KELIMA</p>
+            <p class="font-heading font-700 text-xl" style="color: #FFFFFF;">Kesopanan dan Kesusilaan</p>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div style="height: 1px; background: linear-gradient(90deg, #FFD700, transparent); margin-bottom: 18px;"></div>
+
+        <!-- Kesimpulan -->
+        <p class="font-body text-sm leading-relaxed mb-5" style="color: #D4E0FF;">
+          Amalan meminta maaf bukan sekadar adab harian — ia adalah <strong style="color: #FFD700;">cerminan jiwa yang mulia</strong>. Apabila seseorang murid berani mengakui kesilapan dan memohon maaf dengan ikhlas, dia sedang menghidupkan prinsip kelima Rukun Negara, iaitu <strong style="color: #FFD700;">Kesopanan dan Kesusilaan</strong> — asas pembinaan insan yang berakhlak dan masyarakat yang harmoni.
+        </p>
+
+        <!-- Ikrar Rukun Negara styled -->
+        <div class="rounded-xl p-4 mb-5" style="background-color: rgba(255,215,0,0.08); border: 1px solid rgba(255,215,0,0.3);">
+          <p class="font-heading font-700 text-xs mb-3" style="color: #FFD700; letter-spacing: 0.08em;">📜 IKRAR RUKUN NEGARA</p>
+          <div class="space-y-1">
+            <p class="font-body text-sm" style="color: #A0B4CC;">Kepercayaan kepada Tuhan</p>
+            <p class="font-body text-sm" style="color: #A0B4CC;">Kesetiaan kepada Raja dan Negara</p>
+            <p class="font-body text-sm" style="color: #A0B4CC;">Keluhuran Perlembagaan</p>
+            <p class="font-body text-sm" style="color: #A0B4CC;">Kedaulatan Undang-Undang</p>
+            <p class="font-body text-sm font-800" style="color: #FFD700;">✦ Kesopanan dan Kesusilaan</p>
+          </div>
+        </div>
+
+        <!-- Kaitan -->
+        <div class="rounded-xl p-4" style="background-color: rgba(255,255,255,0.05); border-left: 3px solid #4DD99A;">
+          <p class="font-heading font-700 text-sm mb-2" style="color: #4DD99A;">🌱 Kaitannya dengan Pengajaran Hari Ini:</p>
+          <p class="font-body text-sm" style="color: #C8D8F0; line-height: 1.7;">
+            Murid yang mempraktikkan budaya meminta maaf dengan tulus sedang menyumbang ke arah melahirkan generasi yang <strong style="color: #FFFFFF;">berakhlak mulia, berbudi bahasa, dan menjunjung nilai-nilai luhur bangsa</strong> — selaras dengan hasrat murni Rukun Negara demi membina negara Malaysia yang aman, bersatu, dan sejahtera.
+          </p>
+        </div>
+      </div>
+     </section>
+    </main>
+    <footer class="anim-in anim-d7 text-center py-6 px-4 font-heading font-600 text-sm" style="color: #9A8A7A; background-color: #FFF5F0;">
+     Rancangan Pengajaran | Pendidikan Moral Sekolah Rendah | Mock Teaching
+    </footer>
+   </div>
+
+   <!-- Page 2: Aktiviti Pengajaran Interaktif -->
+   <div id="page2" class="w-full hidden" style="background-color: #FFFBF7;">
+    <header class="anim-in" style="background: linear-gradient(135deg, #FFE8DB 0%, #DDEEFF 50%, #D4F5E4 100%); padding: 48px 24px 40px; text-align: center;">
+     <div class="max-w-3xl mx-auto">
+      <h1 class="font-heading text-4xl md:text-5xl font-900 mb-3" style="color: #4A3728;">Mari Belajar Meminta Maaf</h1>
+      <p class="font-heading text-lg font-600" style="color: #7A6355;">Aktiviti Interaktif Untuk Pelajar</p>
+      <div class="flex gap-2 justify-center mt-4">
+        <button id="page2a-btn" class="px-6 py-2 rounded-full font-heading font-700 text-sm transition-all" style="background-color: #A8EBCA; color: #1B6B42;">🎓 Aktiviti Pelajar</button>
+        <button id="page2b-btn" class="px-6 py-2 rounded-full font-heading font-700 text-sm transition-all" style="background-color: #E8F8EE; color: #1B6B42;">📋 Borang RPH</button>
+      </div>
+     </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 md:px-6 py-8 space-y-8">
+
+     <!-- SECTION: AKTIVITI PELAJAR -->
+     <div id="aktiviti-section">
+
+      <!-- ===================== SET INDUKSI ===================== -->
+      <section class="section-block p-6 md:p-8 mb-8" style="background-color: #FFF5F0;">
+       <h2 class="font-heading text-2xl font-800 mb-4" style="color: #C2662D;">✨ Mula-Mula... Mari Lihat Gambar!</h2>
+       <div class="mb-6 rounded-xl p-5 bg-yellow-50 border-l-4" style="border-color: #FFD700;">
+        <p class="font-heading font-700 mb-2" style="color: #C2662D;">💬 Soalan Untuk Kamu:</p>
+        <p class="font-body" style="color: #555;">Apa yang berlaku? Apa yang patut Ali lakukan?</p>
+       </div>
+       <div class="grid md:grid-cols-2 gap-6">
+        <!-- Gambar 1: Ali Terpijak Kaki Abu -->
+        <div class="bg-white rounded-2xl p-5 shadow-md">
+         <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" class="w-full rounded-xl mb-3" style="background:#FFF5F0;">
+          <!-- Ground -->
+          <rect x="0" y="160" width="300" height="40" fill="#F5E6D3" rx="0"/>
+          <!-- Abu (kiri) - terkejut -->
+          <!-- Badan Abu -->
+          <rect x="60" y="95" width="36" height="55" rx="8" fill="#6BB3FF"/>
+          <!-- Kepala Abu -->
+          <circle cx="78" cy="82" r="22" fill="#FFDBB5"/>
+          <!-- Muka terkejut -->
+          <circle cx="71" cy="79" r="3" fill="#4A3728"/>
+          <circle cx="85" cy="79" r="3" fill="#4A3728"/>
+          <ellipse cx="78" cy="90" rx="6" ry="7" fill="#FF6B6B"/>
+          <!-- Tanda terkejut -->
+          <text x="95" y="65" font-size="20" fill="#FF6B6B">!</text>
+          <!-- Kaki Abu -->
+          <rect x="63" y="148" width="12" height="18" rx="4" fill="#4A90D9"/>
+          <rect x="79" y="148" width="12" height="18" rx="4" fill="#4A90D9"/>
+          <!-- Kasut Abu -->
+          <rect x="60" y="162" width="17" height="8" rx="3" fill="#4A3728"/>
+          <rect x="76" y="162" width="17" height="8" rx="3" fill="#4A3728"/>
+          <!-- Label -->
+          <text x="78" y="185" text-anchor="middle" font-size="11" fill="#1E5A99" font-family="Nunito, sans-serif" font-weight="700">Abu</text>
+
+          <!-- Ali (kanan) -->
+          <!-- Badan Ali -->
+          <rect x="200" y="95" width="36" height="55" rx="8" fill="#FF8C5A"/>
+          <!-- Kepala Ali -->
+          <circle cx="218" cy="82" r="22" fill="#FFDBB5"/>
+          <!-- Muka Ali - teruja/tidak sedar -->
+          <circle cx="211" cy="79" r="3" fill="#4A3728"/>
+          <circle cx="225" cy="79" r="3" fill="#4A3728"/>
+          <path d="M212 88 Q218 93 224 88" stroke="#4A3728" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- Kaki Ali -->
+          <rect x="203" y="148" width="12" height="18" rx="4" fill="#D4622A"/>
+          <rect x="219" y="148" width="12" height="18" rx="4" fill="#D4622A"/>
+          <!-- Kasut Ali -->
+          <rect x="200" y="162" width="17" height="8" rx="3" fill="#4A3728"/>
+          <rect x="216" y="162" width="17" height="8" rx="3" fill="#4A3728"/>
+          <!-- Label -->
+          <text x="218" y="185" text-anchor="middle" font-size="11" fill="#C2662D" font-family="Nunito, sans-serif" font-weight="700">Ali</text>
+
+          <!-- Kaki Ali terpijak kaki Abu - tanda -->
+          <ellipse cx="148" cy="162" rx="18" ry="8" fill="#FF6B6B" opacity="0.3"/>
+          <text x="148" y="155" text-anchor="middle" font-size="14" fill="#FF6B6B">💥</text>
+
+          <!-- Garis tanda terpijak -->
+          <line x1="95" y1="162" x2="200" y2="162" stroke="#FFD4BC" stroke-width="2" stroke-dasharray="5,4"/>
+
+          <!-- Caption -->
+          <rect x="30" y="8" width="240" height="26" rx="8" fill="#FFE8DB"/>
+          <text x="150" y="26" text-anchor="middle" font-size="12" fill="#8B4513" font-family="Nunito, sans-serif" font-weight="700">Ali terpijak kaki Abu!</text>
+         </svg>
+         <p class="font-body text-sm text-center" style="color: #555;">Ali tidak sengaja memijak kaki Abu semasa berjalan.</p>
+        </div>
+
+        <!-- Gambar 2: Tersembunyi / Reveal -->
+        <button id="reveal-situation2-btn" class="bg-white rounded-2xl p-5 shadow-md cursor-pointer transition-all hover:shadow-lg hover:scale-105 active:scale-95 text-left w-full" style="border: 3px dashed #A8EBCA;">
+         <div class="rounded-xl w-full flex items-center justify-center mb-3" style="background: linear-gradient(135deg, #D4F5E4, #E8F8EE); height: 200px;">
+          <div class="text-center">
+           <div class="text-6xl mb-3">❓</div>
+           <p class="font-heading font-700 text-sm" style="color: #1B6B42;">Klik Untuk Lihat</p>
+           <p class="font-body text-xs mt-1" style="color: #555;">Apa yang patut Ali buat?</p>
+          </div>
+         </div>
+         <p class="font-body text-sm text-center" style="color: #555;">Apa tindakan Ali yang betul?</p>
+        </button>
+       </div>
+
+       <!-- Hidden: Gambar 2 revealed -->
+       <div id="situation2-revealed" class="hidden mt-6">
+        <div class="bg-white rounded-2xl p-5 shadow-md">
+         <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" class="w-full rounded-xl mb-3" style="background:#F0FFF7;">
+          <!-- Ground -->
+          <rect x="0" y="160" width="300" height="40" fill="#D4F5E4" rx="0"/>
+          <!-- Abu (kiri) - gembira -->
+          <rect x="55" y="95" width="36" height="55" rx="8" fill="#6BB3FF"/>
+          <circle cx="73" cy="82" r="22" fill="#FFDBB5"/>
+          <!-- Muka gembira Abu -->
+          <circle cx="66" cy="79" r="3" fill="#4A3728"/>
+          <circle cx="80" cy="79" r="3" fill="#4A3728"/>
+          <path d="M66 88 Q73 95 80 88" stroke="#4A3728" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <!-- Kaki Abu -->
+          <rect x="58" y="148" width="12" height="18" rx="4" fill="#4A90D9"/>
+          <rect x="74" y="148" width="12" height="18" rx="4" fill="#4A90D9"/>
+          <rect x="55" y="162" width="17" height="8" rx="3" fill="#4A3728"/>
+          <rect x="71" y="162" width="17" height="8" rx="3" fill="#4A3728"/>
+          <text x="73" y="185" text-anchor="middle" font-size="11" fill="#1E5A99" font-family="Nunito, sans-serif" font-weight="700">Abu</text>
+
+          <!-- Ali (kanan) - membungkuk minta maaf -->
+          <rect x="195" y="105" width="36" height="50" rx="8" fill="#FF8C5A" transform="rotate(-15 213 130)"/>
+          <circle cx="220" cy="88" r="22" fill="#FFDBB5" transform="rotate(-10 220 88)"/>
+          <!-- Muka Ali menyesal -->
+          <circle cx="213" cy="85" r="3" fill="#4A3728"/>
+          <circle cx="227" cy="85" r="3" fill="#4A3728"/>
+          <path d="M213 95 Q220 91 227 95" stroke="#4A3728" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- Tangan Ali hulur maaf -->
+          <line x1="185" y1="120" x2="145" y2="130" stroke="#FFDBB5" stroke-width="8" stroke-linecap="round"/>
+          <text x="213" y="185" text-anchor="middle" font-size="11" fill="#C2662D" font-family="Nunito, sans-serif" font-weight="700">Ali</text>
+
+          <!-- Hati / tanda maaf -->
+          <text x="148" y="118" font-size="22" text-anchor="middle">💚</text>
+
+          <!-- Speech bubble Ali -->
+          <rect x="90" y="50" width="120" height="34" rx="10" fill="#A8EBCA"/>
+          <polygon points="195,70 210,80 205,68" fill="#A8EBCA"/>
+          <text x="150" y="68" text-anchor="middle" font-size="11" fill="#1B6B42" font-family="Nunito, sans-serif" font-weight="700">"Maaf, saya tidak sengaja."</text>
+
+          <!-- Caption -->
+          <rect x="20" y="8" width="260" height="26" rx="8" fill="#A8EBCA"/>
+          <text x="150" y="26" text-anchor="middle" font-size="12" fill="#1B6B42" font-family="Nunito, sans-serif" font-weight="700">Ali meminta maaf dengan ikhlas! 💚</text>
+         </svg>
+         <p class="font-body text-sm text-center" style="color: #1B6B42; font-weight: 600;">Ali meminta maaf kepada Abu dengan tulus dan ikhlas. ✅</p>
+        </div>
+       </div>
+      </section>
+
+      <!-- ===================== AKTIVITI 1 ===================== -->
+      <section class="section-block p-6 md:p-8 mb-8" style="background-color: #F0F7FF;">
+       <h2 class="font-heading text-2xl font-800 mb-2" style="color: #1E5A99;">🎯 Aktiviti 1: Pilih Dialog Yang Betul!</h2>
+       <p class="font-body text-sm mb-5" style="color: #7A6355;">Baca situasi di bawah, kemudian pilih cara meminta maaf yang BETUL.</p>
+
+       <!-- Situasi -->
+       <div class="rounded-xl p-5 mb-6" style="background-color: #E0F2FE; border-left: 4px solid #6BB3FF;">
+        <p class="font-heading font-700 mb-2" style="color: #1E5A99;">📍 Situasi:</p>
+        <p class="font-body" style="color: #1E5A99;">Semasa rehat, <strong>Amir</strong> tidak sengaja menumpahkan makanannya ke atas baju <strong>Ali</strong>. Amir mahu meminta maaf kepada Ali. Cara mana yang BETUL?</p>
+       </div>
+
+       <!-- Dua pilihan A dan B -->
+       <div class="grid md:grid-cols-2 gap-5 mb-5">
+        <!-- Pilihan A (SALAH) -->
+        <button id="choice-a-btn" class="choice-btn bg-white rounded-2xl p-6 shadow-md w-full text-left" onclick="pilihJawapan('A')">
+         <div class="flex items-center gap-3 mb-4">
+          <span class="w-10 h-10 rounded-full flex items-center justify-center font-heading font-900 text-lg text-white flex-shrink-0" style="background-color: #FFB3B3;">A</span>
+          <p class="font-heading font-700 text-sm" style="color: #C0392B;">Cara A</p>
+         </div>
+         <div class="rounded-xl p-4" style="background-color: #FFF5F0;">
+          <p class="font-body italic text-center font-600" style="color: #C0392B; font-size: 15px;">"Alah, baju kau je pun! Tak payah nak lebih-lebih la!"</p>
+         </div>
+         <p class="font-body text-xs text-center mt-3" style="color: #999;">Klik untuk pilih Cara A</p>
+        </button>
+
+        <!-- Pilihan B (BETUL) -->
+        <button id="choice-b-btn" class="choice-btn bg-white rounded-2xl p-6 shadow-md w-full text-left" onclick="pilihJawapan('B')">
+         <div class="flex items-center gap-3 mb-4">
+          <span class="w-10 h-10 rounded-full flex items-center justify-center font-heading font-900 text-lg text-white flex-shrink-0" style="background-color: #A8EBCA;">B</span>
+          <p class="font-heading font-700 text-sm" style="color: #1B6B42;">Cara B</p>
+         </div>
+         <div class="rounded-xl p-4" style="background-color: #F0FFF7;">
+          <p class="font-body italic text-center font-600" style="color: #1B6B42; font-size: 15px;">"Maafkan saya, Ali. Saya tidak sengaja. Biar saya tolong lap."</p>
+         </div>
+         <p class="font-body text-xs text-center mt-3" style="color: #999;">Klik untuk pilih Cara B</p>
+        </button>
+       </div>
+
+       <!-- Feedback: Salah (A) -->
+       <div id="feedback-a" class="hidden rounded-xl p-5 mb-4" style="background-color: #FFECEC; border-left: 4px solid #C0392B;">
+        <p class="font-heading font-700 mb-2 text-lg" style="color: #C0392B;">❌ Cara A — Tidak Betul!</p>
+        <p class="font-body mb-3" style="color: #C0392B;">Cara ini <strong>kasar dan tidak sopan</strong>. Amir tidak menunjukkan rasa bersalah langsung. Ali pasti berasa lebih sedih dan marah.</p>
+        <div class="rounded-lg p-3" style="background-color: #fff0f0;">
+         <p class="font-body text-sm" style="color: #8B0000;">💡 Meminta maaf yang baik perlu: jelas, tulus, dan tunjukkan rasa bertanggungjawab. Cuba pilih <strong>Cara B</strong>!</p>
+        </div>
+       </div>
+
+       <!-- Feedback: Betul (B) -->
+       <div id="feedback-b" class="hidden rounded-xl p-5" style="background-color: #E8F8EE; border-left: 4px solid #1B6B42;">
+        <p class="font-heading font-700 mb-2 text-lg" style="color: #1B6B42;">✅ Cara B — Betul Sekali! Tahniah! 🎉</p>
+        <p class="font-body mb-3" style="color: #1B6B42;">Amir meminta maaf dengan <strong>sopan, tulus, dan bertanggungjawab</strong>. Dia mengakui kesilapan dan menawarkan bantuan. Ali pasti menerima maaf Amir dengan hati yang terbuka!</p>
+        <div class="rounded-lg p-3" style="background-color: #f0fff4;">
+         <p class="font-body text-sm" style="color: #1B6B42;">💡 Cara meminta maaf yang baik: <strong>pandang mata</strong>, sebut nama, cakap "maaf", jelaskan tidak sengaja, dan <strong>tawarkan bantuan</strong>.</p>
+        </div>
+       </div>
+      </section>
+
+      <!-- ===================== AKTIVITI 2 ===================== -->
+      <section class="section-block p-6 md:p-8 mb-8" style="background-color: #FFF5F0;">
+       <h2 class="font-heading text-2xl font-800 mb-4" style="color: #C2662D;">🎭 Aktiviti 2: Mari Lakon!</h2>
+       <div class="bg-white rounded-2xl p-6 shadow-md mb-5" style="border-top: 4px solid #6BB3FF;">
+        <p class="font-heading font-700 mb-3" style="color: #C2662D;">📍 Situasi:</p>
+        <p class="font-body mb-4" style="color: #555;">Kamu terlanggar buku rakan dan ia jatuh. Apa yang kamu buat?</p>
+        <div class="rounded-lg p-4 mb-5" style="background-color: #FFF5F0;">
+         <p class="font-heading font-700 text-sm mb-2" style="color: #C2662D;">💡 Tip Guru:</p>
+         <ul class="space-y-2">
+          <li class="font-body text-sm flex items-start gap-2" style="color: #555;"><span>👁️</span><span><strong>Pandang mata</strong> rakan kamu</span></li>
+          <li class="font-body text-sm flex items-start gap-2" style="color: #555;"><span>💬</span><span><strong>Cakap dengan tulus</strong> dan jelas</span></li>
+          <li class="font-body text-sm flex items-start gap-2" style="color: #555;"><span>😌</span><span><strong>Jangan gelak</strong> atau main-main</span></li>
+         </ul>
+        </div>
+        <button id="start-acting-btn" class="w-full py-3 rounded-xl font-heading font-700 text-white transition-all hover:shadow-lg" style="background-color: #FF8C5A;">🎬 Mulai Lakon Sekarang!</button>
+       </div>
+       <div id="acting-feedback" class="hidden rounded-xl p-5" style="background-color: #E8F8EE;">
+        <p class="font-heading font-700 mb-2" style="color: #1B6B42;">👏 Bagus Sekali!</p>
+        <p class="font-body" style="color: #1B6B42;">Kamu sudah menunjukkan cara meminta maaf yang betul dan tulus. Rakan kamu pasti akan menerima maaf kamu! 💚</p>
+       </div>
+      </section>
+
+      <!-- ===================== SEMAKAN KEFAHAMAN ===================== -->
+      <section class="section-block p-6 md:p-8 mb-8" style="background-color: #F0F7FF;">
+       <h2 class="font-heading text-2xl font-800 mb-5" style="color: #1E5A99;">🧠 Soalan Untuk Kamu Fikirkan</h2>
+       <div class="space-y-4">
+        <div class="bg-white rounded-xl p-4 shadow-sm"><p class="font-heading font-700 text-sm mb-2" style="color: #1E5A99;">❓ Soalan 1:</p><p class="font-body" style="color: #555;">Bila kita patut meminta maaf?</p></div>
+        <div class="bg-white rounded-xl p-4 shadow-sm"><p class="font-heading font-700 text-sm mb-2" style="color: #1E5A99;">❓ Soalan 2:</p><p class="font-body" style="color: #555;">Tunjukkan cara yang betul untuk meminta maaf kepada rakan kamu.</p></div>
+        <div class="bg-white rounded-xl p-4 shadow-sm"><p class="font-heading font-700 text-sm mb-2" style="color: #1E5A99;">❓ Soalan 3:</p><p class="font-body" style="color: #555;">Bagaimana perasaan kamu bila seseorang meminta maaf kepada kamu dengan ikhlas?</p></div>
+       </div>
+      </section>
+
+      <!-- ===================== PENUTUP ===================== -->
+      <section class="section-block p-6 md:p-8 text-center" style="background: linear-gradient(135deg, #FFE8DB, #D4F5E4);">
+       <h2 class="font-heading text-2xl font-800 mb-4" style="color: #4A3728;">🕊️ Mari Sebutkan Ikrar Bersama-Sama!</h2>
+       <div class="bg-white rounded-2xl p-6 shadow-md max-w-lg mx-auto mb-5" style="border: 3px solid #FFD4BC;"><p class="font-heading text-lg font-800" style="color: #C2662D;">"Saya akan meminta maaf dengan ikhlas jika saya bersalah."</p></div>
+       <p class="font-body" style="color: #555;">Meminta maaf adalah tanda <strong>BERANI</strong>, bukan tanda lemah. 💪</p>
+
+       <!-- Kesimpulan Rukun Negara - Page 2 -->
+       <div class="mt-8 rounded-2xl p-6 text-left" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%); border: 2px solid #FFD700;">
+         <div class="flex items-center gap-3 mb-4">
+           <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: #FFD700;">
+             <span style="font-size: 18px;">🌙</span>
+           </div>
+           <div>
+             <p class="font-heading font-700 text-xs" style="color: #FFD700; letter-spacing: 0.05em;">RUKUN NEGARA — PRINSIP KELIMA</p>
+             <p class="font-heading font-700 text-lg" style="color: #FFFFFF;">Kesopanan dan Kesusilaan</p>
+           </div>
+         </div>
+         <div style="height: 1px; background: linear-gradient(90deg, #FFD700, transparent); margin-bottom: 16px;"></div>
+         <p class="font-body text-sm leading-relaxed mb-4" style="color: #D4E0FF;">
+           Tahukah kamu? Amalan meminta maaf dengan ikhlas adalah sebahagian daripada prinsip kelima Rukun Negara — <strong style="color: #FFD700;">Kesopanan dan Kesusilaan</strong>. Apabila kamu berani meminta maaf, kamu sedang menjadi <strong style="color: #FFFFFF;">rakyat Malaysia yang berbudi luhur dan berakhlak mulia</strong>! 🇲🇾
+         </p>
+         <div class="rounded-xl p-4" style="background-color: rgba(255,255,255,0.05); border-left: 3px solid #4DD99A;">
+           <p class="font-heading font-700 text-sm mb-1" style="color: #4DD99A;">🌱 Ingatlah selalu:</p>
+           <p class="font-body text-sm" style="color: #C8D8F0; line-height: 1.7;">Setiap kali kamu meminta maaf dengan tulus, kamu sedang membina Malaysia yang lebih baik — satu langkah kecil yang membawa perubahan besar untuk masyarakat yang harmoni dan sejahtera.</p>
+         </div>
+       </div>
+      </section>
+     </div>
+
+     <!-- SECTION: BORANG RPH -->
+     <div id="borang-section" class="hidden">
+      <section class="section-block p-8 mt-8" style="background-color: #F0F7FF;">
+       <h2 class="font-heading text-2xl font-800 mb-6" style="color: #1E5A99;">📝 Borang RPH — Isi Sendiri</h2>
+       <div class="space-y-5">
+        <div class="bg-white rounded-xl p-5 shadow-sm"><label class="font-heading font-700 text-sm mb-2 block" style="color: #1E5A99;">Tajuk RPH:</label><input type="text" id="rph-tajuk" placeholder="Contoh: Meminta Maaf dengan Ikhlas" class="w-full rounded-lg border-2 p-3 font-body" style="border-color: #BAD9FF; color: #333;"></div>
+        <div class="bg-white rounded-xl p-5 shadow-sm"><label class="font-heading font-700 text-sm mb-2 block" style="color: #1E5A99;">Nilai Murni:</label><textarea id="rph-nilai" placeholder="Contoh: Keikhlasan, Hormat-Menghormati, Belas Kasihan" class="w-full rounded-lg border-2 p-3 font-body h-20" style="border-color: #BAD9FF; color: #333;"></textarea></div>
+        <div class="bg-white rounded-xl p-5 shadow-sm"><label class="font-heading font-700 text-sm mb-2 block" style="color: #1E5A99;">Objektif Pembelajaran:</label><textarea id="rph-objektif" placeholder="Contoh: Murid dapat memahami kepentingan meminta maaf..." class="w-full rounded-lg border-2 p-3 font-body h-24" style="border-color: #BAD9FF; color: #333;"></textarea></div>
+        <div class="bg-white rounded-xl p-5 shadow-sm"><label class="font-heading font-700 text-sm mb-2 block" style="color: #1E5A99;">Set Induksi:</label><textarea id="rph-induksi" placeholder="Contoh: Guru menunjukkan gambar situasi..." class="w-full rounded-lg border-2 p-3 font-body h-20" style="border-color: #BAD9FF; color: #333;"></textarea></div>
+        <div class="bg-white rounded-xl p-5 shadow-sm"><label class="font-heading font-700 text-sm mb-2 block" style="color: #1E5A99;">Aktiviti Pengajaran:</label><textarea id="rph-aktiviti" placeholder="Contoh: Aktiviti 1: Dialog... Aktiviti 2: Lakonan..." class="w-full rounded-lg border-2 p-3 font-body h-24" style="border-color: #BAD9FF; color: #333;"></textarea></div>
+        <div class="bg-white rounded-xl p-5 shadow-sm"><label class="font-heading font-700 text-sm mb-2 block" style="color: #1E5A99;">Semakan Kefahaman:</label><textarea id="rph-semakan" placeholder="Contoh: Soalan 1, Soalan 2, Soalan 3..." class="w-full rounded-lg border-2 p-3 font-body h-20" style="border-color: #BAD9FF; color: #333;"></textarea></div>
+        <div class="bg-white rounded-xl p-5 shadow-sm"><label class="font-heading font-700 text-sm mb-2 block" style="color: #1E5A99;">Penutup/Ikrar:</label><textarea id="rph-penutup" placeholder="Contoh: Ikrar bersama-sama..." class="w-full rounded-lg border-2 p-3 font-body h-20" style="border-color: #BAD9FF; color: #333;"></textarea></div>
+        <div class="bg-white rounded-xl p-5 shadow-sm"><label class="font-heading font-700 text-sm mb-2 block" style="color: #1E5A99;">Bahan Bantu Mengajar (BBM):</label><textarea id="rph-bbm" placeholder="Contoh: Kad dialog, gambar, boneka tangan..." class="w-full rounded-lg border-2 p-3 font-body h-20" style="border-color: #BAD9FF; color: #333;"></textarea></div>
+        <div class="bg-white rounded-xl p-5 shadow-sm"><label class="font-heading font-700 text-sm mb-2 block" style="color: #1E5A99;">Masa (minit):</label><input type="number" id="rph-masa" placeholder="Contoh: 5" class="w-full rounded-lg border-2 p-3 font-body" style="border-color: #BAD9FF; color: #333;"></div>
+        <div class="bg-white rounded-xl p-5 shadow-sm"><label class="font-heading font-700 text-sm mb-2 block" style="color: #1E5A99;">Catatan Guru:</label><textarea id="rph-catatan" placeholder="Contoh: Tips mengajar, perkara perlu diberi perhatian..." class="w-full rounded-lg border-2 p-3 font-body h-20" style="border-color: #BAD9FF; color: #333;"></textarea></div>
+       </div>
+       <div class="flex gap-3 mt-8">
+        <button id="save-rph-btn" class="flex-1 py-3 rounded-xl font-heading font-700 text-white transition-all hover:shadow-lg" style="background-color: #4DD99A;">💾 Simpan RPH Saya</button>
+        <button id="clear-rph-btn" class="flex-1 py-3 rounded-xl font-heading font-700 text-white transition-all hover:shadow-lg" style="background-color: #FF8C5A;">🗑️ Padam Semua</button>
+       </div>
+       <div id="rph-status" class="mt-4 text-center font-heading font-600 text-sm hidden" style="color: #1B6B42; background-color: #E8F8EE; padding: 12px; border-radius: 8px;">✅ RPH telah disimpan!</div>
+      </section>
+     </div>
+    </main>
+    <footer class="text-center py-6 px-4 font-heading font-600 text-sm" style="color: #9A8A7A; background-color: #FFF5F0;">
+     Aktiviti Pengajaran | Pendidikan Moral Sekolah Rendah | Mock Teaching
+    </footer>
+   </div>
+
+   <script>
+    // ===== PAGE NAVIGATION =====
+    function showPage(pageId) {
+      document.getElementById('page1').classList.add('hidden');
+      document.getElementById('page2').classList.add('hidden');
+      document.getElementById(pageId).classList.remove('hidden');
+      document.getElementById('page1-btn').style.backgroundColor = '#E8F8EE';
+      document.getElementById('page1-btn').style.color = '#1B6B42';
+      document.getElementById('page2-btn').style.backgroundColor = '#E8F8EE';
+      document.getElementById('page2-btn').style.color = '#1B6B42';
+      if (pageId === 'page1') {
+        document.getElementById('page1-btn').style.backgroundColor = '#FFD4BC';
+        document.getElementById('page1-btn').style.color = '#8B4513';
+      } else {
+        document.getElementById('page2-btn').style.backgroundColor = '#A8EBCA';
+        document.getElementById('page2-btn').style.color = '#1B6B42';
+      }
+    }
+    document.getElementById('page1-btn').addEventListener('click', () => showPage('page1'));
+    document.getElementById('page2-btn').addEventListener('click', () => showPage('page2'));
+
+    // ===== REVEAL SITUATION 2 =====
+    document.getElementById('reveal-situation2-btn').addEventListener('click', function() {
+      document.getElementById('situation2-revealed').classList.remove('hidden');
+      this.style.display = 'none';
+    });
+
+    // ===== AKTIVITI 1: PILIH A atau B =====
+    function pilihJawapan(pilihan) {
+      // Reset semua button
+      const btnA = document.getElementById('choice-a-btn');
+      const btnB = document.getElementById('choice-b-btn');
+      btnA.classList.remove('selected-wrong', 'selected-correct');
+      btnB.classList.remove('selected-wrong', 'selected-correct');
+      document.getElementById('feedback-a').classList.add('hidden');
+      document.getElementById('feedback-b').classList.add('hidden');
+
+      if (pilihan === 'A') {
+        btnA.classList.add('selected-wrong');
+        document.getElementById('feedback-a').classList.remove('hidden');
+        document.getElementById('feedback-a').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } else {
+        btnB.classList.add('selected-correct');
+        document.getElementById('feedback-b').classList.remove('hidden');
+        document.getElementById('feedback-b').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+    // expose globally for onclick
+    window.pilihJawapan = pilihJawapan;
+
+    // ===== AKTIVITI 2: LAKON =====
+    document.getElementById('start-acting-btn').addEventListener('click', function() {
+      document.getElementById('acting-feedback').classList.remove('hidden');
+      this.disabled = true;
+      this.style.opacity = '0.7';
+    });
+
+    // ===== PAGE 2 SUB-TABS =====
+    document.getElementById('page2a-btn').addEventListener('click', function() {
+      document.getElementById('aktiviti-section').classList.remove('hidden');
+      document.getElementById('borang-section').classList.add('hidden');
+      this.style.backgroundColor = '#A8EBCA';
+      this.style.color = '#1B6B42';
+      document.getElementById('page2b-btn').style.backgroundColor = '#E8F8EE';
+      document.getElementById('page2b-btn').style.color = '#1B6B42';
+    });
+    document.getElementById('page2b-btn').addEventListener('click', function() {
+      document.getElementById('aktiviti-section').classList.add('hidden');
+      document.getElementById('borang-section').classList.remove('hidden');
+      this.style.backgroundColor = '#A8EBCA';
+      this.style.color = '#1B6B42';
+      document.getElementById('page2a-btn').style.backgroundColor = '#E8F8EE';
+      document.getElementById('page2a-btn').style.color = '#1B6B42';
+    });
+
+    // ===== BORANG RPH =====
+    document.getElementById('save-rph-btn').addEventListener('click', function() {
+      const data = {
+        tajuk: document.getElementById('rph-tajuk').value,
+        nilai: document.getElementById('rph-nilai').value,
+        objektif: document.getElementById('rph-objektif').value,
+        induksi: document.getElementById('rph-induksi').value,
+        aktiviti: document.getElementById('rph-aktiviti').value,
+        semakan: document.getElementById('rph-semakan').value,
+        penutup: document.getElementById('rph-penutup').value,
+        bbm: document.getElementById('rph-bbm').value,
+        masa: document.getElementById('rph-masa').value,
+        catatan: document.getElementById('rph-catatan').value
+      };
+      localStorage.setItem('rphData', JSON.stringify(data));
+      const s = document.getElementById('rph-status');
+      s.classList.remove('hidden');
+      setTimeout(() => s.classList.add('hidden'), 3000);
+    });
+    document.getElementById('clear-rph-btn').addEventListener('click', function() {
+      if (confirm('Yakin anda mahu padam semua data RPH?')) {
+        ['rph-tajuk','rph-nilai','rph-objektif','rph-induksi','rph-aktiviti','rph-semakan','rph-penutup','rph-bbm','rph-masa','rph-catatan'].forEach(id => {
+          const el = document.getElementById(id);
+          if (el) el.value = '';
+        });
+        localStorage.removeItem('rphData');
+      }
+    });
+    window.addEventListener('load', function() {
+      const saved = localStorage.getItem('rphData');
+      if (saved) {
+        const d = JSON.parse(saved);
+        Object.keys(d).forEach(k => {
+          const el = document.getElementById('rph-' + k);
+          if (el) el.value = d[k] || '';
+        });
+      }
+    });
+   </script>
+  </div>
+ </body>
+</html>
